@@ -21,10 +21,10 @@ public class WavAudioFilter implements AudioFilter {
 	FileSource input_file;
 	FileSink output_file;
 	
-	public WavAudioFilter(String[] fichier) {
+	public WavAudioFilter(String[] file) {
 		try {
-			this.input_file = new FileSource(fichier[1]);
-			this.output_file = new FileSink(fichier[2]);
+			this.input_file = new FileSource(file[0]);
+			this.output_file = new FileSink(file[1]);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
